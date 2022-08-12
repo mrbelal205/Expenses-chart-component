@@ -1,0 +1,155 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+  user-select: none;
+}
+.main {
+  height: 100vh;
+  background-color: hsl(27, 66%, 92%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main .container {
+  width: 425px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media (max-width: 450px) {
+  .main .container {
+    width: 340px;
+  }
+}
+.main .container .head {
+  background-color: hsl(10, 79%, 65%);
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 0 0 1px rgb(0 0 0 / 25%);
+  color: white;
+}
+/* .main .container .head .balance {
+  color: hsl(27, 66%, 92%);
+} */
+.main .container .head .balance p {
+  text-transform: capitalize;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.main .container .head .logo img {
+  width: 50px;
+}
+.main .container .content {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 1px rgb(0 0 0 / 25%);
+}
+.main .container .content h2 {
+  color: hsl(25, 47%, 15%);
+}
+.main .container .content .days {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding-block-end: 25px;
+  position: relative;
+  margin-block-start: 50px;
+}
+@media (max-width: 450px) {
+  .main .container .content .days {
+    height: 250px;
+  }
+}
+.main .container .content .days > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.main .container .content .days > div > .present {
+  width: 38px;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 6px;
+  position: relative;
+}
+.main .container .content .days > div > .present > .amount {
+  width: 55px;
+  height: 27.5px;
+  position: absolute;
+  background-color: hsl(25, 47%, 15%);
+  top: -35px;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-size: 14px;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+@media (max-width: 450px) {
+  .main .container .content .days > div > .present {
+    width: 35px;
+  }
+  .main .container .content .days > div > .present > .amount {
+    width: 45px;
+    font-size: 12px;
+  }
+}
+.main .container .content .days > div > .present.big {
+  background-color: hsl(186, 34%, 60%);
+}
+.main .container .content .days > div > p {
+  color: hsl(28, 10%, 53%);
+  font-size: 14px;
+}
+.main .container .content .days::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  background-color: hsl(27, 66%, 92%);
+}
+.main .container .content .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block-start: 25px;
+}
+.main .container .content .info .total p {
+  color: hsl(28, 10%, 53%);
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.main .container .content .info .total h1 {
+  margin: 0;
+  color: hsl(25, 47%, 15%);
+}
+.main .container .content .info .last-month h4 {
+  text-align: end;
+  color: hsl(25, 47%, 15%);
+}
+.main .container .content .info .last-month p {
+  color: hsl(28, 10%, 53%);
+  font-size: 15px;
+}
